@@ -227,9 +227,17 @@
     compatible = "zmk,behavior-macro-one-param";
     #binding-cells = <1>;
     bindings =
-            <&macro_tab &kp LG(U)>,
-            <&macro_param_1to1>,
-            <&macro_tab &kp MACRO_PLACEHOLDER>;
+//            <&macro_tab &kp LG(U)>,
+//            <&macro_param_1to1>,
+//            <&kp MACRO_PLACEHOLDER>;
+              <&macro_press>,
+              <&kp LEFT_ALT>,
+              <&macro_tap>,
+              <&kp U>,
+              <&macro_release>,
+              <&kp LEFT_ALT &macro_param_1to1>,
+              <&macro_tap>,
+              <&kp MACRO_PLACEHOLDER>;
     display-name = "Umlaut X";
     label = "UMLAUT_X";
   };
