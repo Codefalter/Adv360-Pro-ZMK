@@ -56,10 +56,10 @@
             display-name = "Base";
             bindings = <
 &kp EQUAL  &kp N1          &kp N2          &kp N3              &kp N4            &kp N5  &tog 1                                                   &mo 3      &kp N6  &kp N7             &kp N8              &kp N9          &kp N0             &kp MINUS
-&kp TAB    &kp Q           &kp W           &kp E               &kp R             &kp T   &tog 10                                                  &mo 11     &kp Y   &kp U              &kp I               &kp O           &kp P              &kp BSLH
-&kp ESC    &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G   &tog 0    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &mo 12     &kp H   &hm RIGHT_SHIFT J  &hm LEFT_CONTROL K  &hm LEFT_ALT L  &hm LEFT_GUI SEMI  &kp SQT
-&kp LSHFT  &kp Z           &kp X           &kp C               &kp V             &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp M              &lt 12 COMMA        &kp DOT         &kp FSLH           &kp RSHFT
-&mo 2      &kp GRAVE       &kp CAPS        &kp LEFT            &kp RIGHT                 &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP             &kp DOWN            &kp LBKT        &kp RBKT           &mo 2
+&kp TAB    &kp Q           &kp W           &kp E               &kp R             &kp T   &tog 8                                                   &mo 9      &kp Y   &kp U              &kp I               &kp O           &kp P              &kp BSLH
+&kp ESC    &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G   &tog 0    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &mo 10     &kp H   &hm RIGHT_SHIFT J  &hm LEFT_CONTROL K  &hm LEFT_ALT L  &hm LEFT_GUI SEMI  &kp SQT
+&kp LSHFT  &kp Z           &kp X           &kp C               &kp V             &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp M              &lt 10 COMMA        &kp DOT         &kp FSLH           &kp RSHFT
+&mo 2      &kp GRAVE       &kp W           &kp LEFT            &kp RIGHT                 &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP             &kp DOWN            &kp LBKT        &kp RBKT           &mo 2
             >;
         };
 
@@ -116,35 +116,14 @@
             status = "reserved";
         };
 
-        layer_8 {
-            display-name = "Base";
-            bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                   &mo 3      &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                    &none      &kp Z   &kp U   &kp I      &kp O     &kp P     &kp LEFT_BRACKET
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Y      &kp X     &kp C     &kp V      &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
-            >;
-        };
-
-        layer_9 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &sl 9   &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
         MAC_Default {
             display-name = "Base";
             bindings = <
 &kp EQUAL  &kp N1          &kp N2          &kp N3              &kp N4            &kp N5  &tog 1                                                   &mo 3      &kp N6  &kp N7             &kp N8              &kp N9          &kp N0             &kp MINUS
-&kp TAB    &kp Q           &kp W           &kp E               &kp R             &kp T   &tog 10                                                  &mo 11     &kp Y   &kp U              &kp I               &kp O           &kp P              &kp BSLH
-&kp ESC    &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G   &tog 0    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &mo 12     &kp H   &hm RIGHT_SHIFT J  &hm LEFT_CONTROL K  &hm LEFT_ALT L  &hm LEFT_GUI SEMI  &kp SQT
-&kp LSHFT  &kp Z           &kp X           &kp C               &kp V             &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp M              &lt 11 COMMA        &kp DOT         &kp FSLH           &kp RSHFT
-&mo 2      &kp GRAVE       &kp CAPS        &kp LEFT            &kp RIGHT                 &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP             &kp DOWN            &kp LBKT        &kp RBKT           &mo 2
+&kp TAB    &kp Q           &kp W           &kp E               &kp R             &kp T   &tog 8                                                   &mo 9      &kp Y   &kp U              &kp I               &kp O           &kp P              &kp BSLH
+&kp ESC    &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G   &tog 0    &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &mo 10     &kp H   &hm RIGHT_SHIFT J  &hm LEFT_CONTROL K  &hm LEFT_ALT L  &hm LEFT_GUI SEMI  &kp SQT
+&kp LSHFT  &kp Z           &kp X           &kp C               &kp V             &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp M              &lt 9 COMMA         &kp DOT         &kp FSLH           &kp RSHFT
+&mo 2      &kp GRAVE       &kp M           &kp LEFT            &kp RIGHT                 &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP             &kp DOWN            &kp LBKT        &kp RBKT           &mo 2
             >;
         };
 
