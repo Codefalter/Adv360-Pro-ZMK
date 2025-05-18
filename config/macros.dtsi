@@ -222,3 +222,14 @@
     bindings = <&mkp MB1 &mkp MB1>;
     display-name = "Double Click";
   };
+
+  Mac_Umlaut_X: Mac_Umlaut_X {
+    compatible = "zmk,behavior-macro-one-param";
+    #binding-cells = <1>;
+    bindings =
+            <&macro_tab &kp LG(U)>,
+            <&macro_param_1to1>,
+            <&macro_tab &kp MACRO_PLACEHOLDER>;
+    display-name = "Umlaut X";
+    label = "UMLAUT_X";
+  };
