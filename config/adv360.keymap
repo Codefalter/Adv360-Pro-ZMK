@@ -19,17 +19,33 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        tgl: tgl {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TGL";
+            #binding-cells = <1>;
+            toggle-mode = "flip";
+        };
     };
 
     macros {
-        M_Ul_X: MAC_Umlaut_X {
+        MAC_UL: MAC_Umlaut_X {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp LG(U) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MAC_UMLAUT_X";
+        };
+
+        WIN_UL: WIN_UL {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                    <&macro_tab &kp LG(U)>,
-                    <&macro_param_1to1>,
-                    <&kp MACRO_PLACEHOLDER>;
-            label = "MAC_UMLAUT_X";
+                <&macro_press>,
+                <&kp RIGHT_ALT &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp RIGHT_ALT>;
+
+            label = "WIN_UL";
         };
     };
 
@@ -40,8 +56,8 @@
             display-name = "Base";
             bindings = <
 &kp EQUAL  &kp N1          &kp N2          &kp N3              &kp N4            &kp N5  &tog 1                                                   &mo 3      &kp N6  &kp N7             &kp N8              &kp N9          &kp N0             &kp MINUS
-&kp TAB    &kp Q           &kp W           &kp E               &kp R             &kp T   &none                                                    &none      &kp Y   &kp U              &kp I               &kp O           &kp P              &kp BSLH
-&kp ESC    &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &hm RIGHT_SHIFT J  &hm LEFT_CONTROL K  &hm LEFT_ALT L  &hm LEFT_GUI SEMI  &kp SQT
+&kp TAB    &kp Q           &kp W           &kp E               &kp R             &kp T   &tgl 10                                                  &none      &kp Y   &kp U              &kp I               &kp O           &kp P              &kp BSLH
+&kp ESC    &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G   &tog 10   &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &hm RIGHT_SHIFT J  &hm LEFT_CONTROL K  &hm LEFT_ALT L  &hm LEFT_GUI SEMI  &kp SQT
 &kp LSHFT  &kp Z           &kp X           &kp C               &kp V             &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp M              &lt 12 COMMA        &kp DOT         &kp FSLH           &kp RSHFT
 &mo 2      &kp GRAVE       &kp CAPS        &kp LEFT            &kp RIGHT                 &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP             &kp DOWN            &kp LBKT        &kp RBKT           &mo 2
             >;
@@ -125,8 +141,8 @@
             display-name = "Base";
             bindings = <
 &kp EQUAL  &kp N1          &kp N2          &kp N3              &kp N4            &kp N5  &tog 1                                                   &mo 3      &kp N6  &kp N7             &kp N8              &kp N9          &kp N0             &kp MINUS
-&kp TAB    &kp Q           &kp W           &kp E               &kp R             &kp T   &none                                                    &none      &kp Y   &kp U              &kp I               &kp O           &kp P              &kp BSLH
-&kp ESC    &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &hm RIGHT_SHIFT J  &hm LEFT_CONTROL K  &hm LEFT_ALT L  &hm LEFT_GUI SEMI  &kp SQT
+&kp TAB    &kp Q           &kp W           &kp E               &kp R             &kp T   &tgl 10                                                  &none      &kp Y   &kp U              &kp I               &kp O           &kp P              &kp BSLH
+&kp ESC    &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G   &tog 10   &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &hm RIGHT_SHIFT J  &hm LEFT_CONTROL K  &hm LEFT_ALT L  &hm LEFT_GUI SEMI  &kp SQT
 &kp LSHFT  &kp Z           &kp X           &kp C               &kp V             &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp M              &lt 11 COMMA        &kp DOT         &kp FSLH           &kp RSHFT
 &mo 2      &kp GRAVE       &kp CAPS        &kp LEFT            &kp RIGHT                 &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP             &kp DOWN            &kp LBKT        &kp RBKT           &mo 2
             >;
@@ -134,21 +150,21 @@
 
         MAC_Umlaute {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans     &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &MAC_UL U  &trans  &MAC_UL O  &trans  &trans
+&trans  &MAC_UL A  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans     &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans     &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans     &trans  &trans     &trans  &trans
             >;
         };
 
         WIN_Umlaute {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans     &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &WIN_UL U  &trans  &WIN_UL O  &trans  &trans
+&trans  &WIN_UL A  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans     &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans     &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans     &trans  &trans     &trans  &trans
             >;
         };
     };
