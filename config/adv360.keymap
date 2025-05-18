@@ -152,7 +152,7 @@
             bindings = <
 &trans  &trans     &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans     &trans  &trans     &trans  &trans
 &trans  &trans     &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &MAC_UL U  &trans  &MAC_UL O  &trans  &trans
-&trans  &MAC_UL A  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &MAC_UL A  &trans  &trans  &trans  &trans  &kp M   &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans  &trans     &trans  &trans
 &trans  &trans     &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans     &trans  &trans     &trans  &trans
 &trans  &trans     &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans     &trans  &trans     &trans  &trans
             >;
@@ -162,7 +162,7 @@
             bindings = <
 &trans  &trans     &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans     &trans  &trans     &trans  &trans
 &trans  &trans     &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &WIN_UL U  &trans  &WIN_UL O  &trans  &trans
-&trans  &WIN_UL A  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &WIN_UL A  &trans  &trans  &trans  &trans  &kp W   &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans  &trans     &trans  &trans
 &trans  &trans     &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans     &trans  &trans     &trans  &trans
 &trans  &trans     &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans     &trans  &trans     &trans  &trans
             >;
