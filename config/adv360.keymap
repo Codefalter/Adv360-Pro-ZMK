@@ -39,12 +39,10 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
                 <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LEFT_ALT &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+                <&kp LS(SINGLE_QUOTE)>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "MAC_UMLAUT_X";
         };
@@ -53,12 +51,10 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_press>,
-                <&kp RIGHT_ALT>,
                 <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_release>,
-                <&kp RIGHT_ALT>;
+                <&kp LS(SINGLE_QUOTE)>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "WIN_UL";
         };
@@ -103,7 +99,7 @@
             bindings = <
 &trans  &trans     &trans     &trans  &trans  &trans  &trans                                      &trans  &trans  &trans     &trans  &trans     &trans  &trans
 &trans  &trans     &trans     &trans  &trans  &trans  &trans                                      &trans  &trans  &WIN_UL U  &trans  &WIN_UL O  &trans  &trans
-&trans  &WIN_UL A  &kp LA(S)  &trans  &trans  &kp W   &kp W   &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &WIN_UL A  &kp RA(S)  &trans  &trans  &kp W   &kp W   &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans  &trans     &trans  &trans
 &trans  &trans     &trans     &trans  &trans  &trans                  &trans      &trans                  &trans  &trans     &trans  &trans     &trans  &trans
 &trans  &trans     &trans     &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans     &trans  &trans     &trans  &trans
             >;
